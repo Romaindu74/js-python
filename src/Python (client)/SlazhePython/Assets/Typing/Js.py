@@ -1,0 +1,19 @@
+from typing import Any
+
+class execjsCallable:
+    def call(self, *args, **kwargs) -> Any:...
+
+class Js:
+    AES:            Any
+    ZLIB:           Any
+
+    def_receive:    dict[str, Any]
+    def_key:        dict[str, Any]
+    def_send:       dict[str, Any]
+
+    def __init__(self)                                      -> None:...
+
+    def Encrypt(self, text: str, key: str, *args, **kwargs) -> str:...
+    def Decrypt(self, text: str, key: str, *args, **kwargs) -> str:...
+    def Deflate(self, text: str, *args, **kwargs)           -> str:...
+    def Inflate(self, text: str, *args, **kwargs)           -> str:...
