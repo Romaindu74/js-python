@@ -3,13 +3,7 @@ let main = (function(o={}) {o.I=(function(){var l=void 0,aa=this;function r(c,d)
 let [In, De] = main();
 
 function numberToBinary(numberString) {
-    // Séparer la chaîne de nombres en un tableau
-    var numbers = numberString.split('.');
-    // Convertir chaque nombre en son équivalent en caractère
-    var bytes = numbers.map(number => String.fromCharCode(parseInt(number)));
-    // Concaténer les caractères pour former la chaîne binaire
-    var binaryString = bytes.join('');
-    return binaryString;
+    return (numberString.split('.').map(number => String.fromCharCode(parseInt(number)))).join('');
 }
 
 function Inflate(numbers) {
@@ -17,13 +11,7 @@ function Inflate(numbers) {
 }
 
 function binaryToNumber(binaryString) {
-    // Convertir la chaîne binaire en tableau d'octets
-    var bytes = Array.from(binaryString);
-    // Convertir chaque octet en valeur décimale et les stocker dans un tableau
-    var decimalValues = bytes.map(byte => byte.charCodeAt(0));
-    // Joindre les valeurs décimales en une chaîne de nombres séparés par des points
-    var numberString = decimalValues.join('.');
-    return numberString;
+    return (Array.from(binaryString).map(byte => byte.charCodeAt(0))).join('.');
 }
 
 function Deflate(text) {
