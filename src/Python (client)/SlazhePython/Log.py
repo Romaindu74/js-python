@@ -191,8 +191,7 @@ class Logger:
             )
 
         if kwargs.get('Log', True):
-            # print(context)
-            pass
+            print(context)
 
         if kwargs.get('Save', True) and level > 10:
             self._save(text, level, name = name)
